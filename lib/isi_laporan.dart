@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
-class BuatLaporan extends StatefulWidget {
+class IsiLaporan extends StatefulWidget {
   @override
-  _BuatLaporanState createState() => _BuatLaporanState();
+  _IsiLaporanState createState() => _IsiLaporanState();
 }
 
-class _BuatLaporanState extends State<BuatLaporan> {
+class _IsiLaporanState extends State<IsiLaporan> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   int _selectedIndex = 0;
   String? _kelas;
@@ -272,57 +272,101 @@ class _BuatLaporanState extends State<BuatLaporan> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
                     Align(
-                      alignment: Alignment.bottomCenter,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.check_circle,
-                                      color: Colors.green,
+                      alignment: Alignment.topCenter,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: Color(0xFF000000).withOpacity(0.16),
+                                width: 1.0,
+                              ),
+                            ),
+                            width: 335,
+                            height: 150,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 11.0, left: 3.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0),
+                                    child: Text(
+                                      "1 Tanggapan",
+                                      style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 135, 131, 155),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text('Sukses'),
-                                  ],
-                                ),
-                                content: Text('Laporan anda berhasil dikirim'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text('OK'),
+                                  ),
+                                  SizedBox(height: 15),
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Image.asset(
+                                        'assets/orang.png',
+                                        width: 40,
+                                        height: 40,
+                                      ),
+                                      SizedBox(width: 10),
+                                      Expanded(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 6.0),
+                                              child: Text(
+                                                "Guru BK 1",
+                                                style: TextStyle(
+                                                  color: Color(0xFF584D99),
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 6.0),
+                                              child: Text(
+                                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis.",
+                                                style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 135, 131, 155),
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
-                              );
-                            },
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
                           ),
-                        ),
-                        child: Text(
-                          "Kirim",
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),

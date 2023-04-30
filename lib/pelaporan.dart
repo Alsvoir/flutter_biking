@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biking/buat_laporan.dart';
 import 'package:flutter_biking/buka_pelaporan.dart';
+import 'package:flutter_biking/navigation.dart';
 
 class Pelaporan extends StatefulWidget {
   @override
@@ -21,49 +22,25 @@ class _PelaporanState extends State<Pelaporan> {
       _selectedIndex = index;
     });
   }
+  void _navigateToNavigation() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Navigation()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prelaporan'),
+        title: Text('Pelaporan'),
       ),
       backgroundColor: Color(0xFFFFFFFF),
       body: SafeArea(
-        child: Stack(
+        child: 
+        
+        Stack(
           children: [
-            // Align(
-            //   alignment: Alignment.topCenter,
-            //   child: Container(
-            //     padding: EdgeInsets.symmetric(vertical: 0, horizontal: 41),
-            //     decoration: BoxDecoration(
-            //       color: Color(0xFF38ACFF),
-            //     ),
-            //     width: double.infinity,
-            //     height: 75,
-            //     child: Row(
-            //       crossAxisAlignment: CrossAxisAlignment.center,
-            //       children: [
-            //         Image.asset(
-            //           'assets/Back.png',
-            //           width: 20,
-            //           height: 20,
-            //         ),
-            //         SizedBox(
-            //           width: 10,
-            //         ),
-            //         const Text(
-            //           "Pelaporan",
-            //           style: TextStyle(
-            //             color: Color(0xFFFFFFFF),
-            //             fontSize: 20,
-            //             fontWeight: FontWeight.w600,
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
             Align(
               alignment: Alignment.topCenter,
               child: Column(

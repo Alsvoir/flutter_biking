@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
-class BuatLaporan extends StatefulWidget {
+class EditLaporan extends StatefulWidget {
   @override
-  _BuatLaporanState createState() => _BuatLaporanState();
+  _EditLaporanState createState() => _EditLaporanState();
 }
 
-class _BuatLaporanState extends State<BuatLaporan> {
+class _EditLaporanState extends State<EditLaporan> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   int _selectedIndex = 0;
   String? _kelas;
@@ -272,58 +272,61 @@ class _BuatLaporanState extends State<BuatLaporan> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.check_circle,
-                                      color: Colors.green,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text('Sukses'),
-                                  ],
-                                ),
-                                content: Text('Laporan anda berhasil dikirim'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text('OK'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 10),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        child: Text(
-                          "Kirim",
-                          style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
+                    SizedBox(
+                      height: 5,
                     ),
+                    Padding(
+                      padding: EdgeInsets.all(25),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                // kode untuk tombol Batal
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.grey,
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 10),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              child: Text(
+                                'Batal',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 40),
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                // kode untuk tombol Simpan
+                              },
+                              style: ElevatedButton.styleFrom(
+                               backgroundColor: Colors.blue,
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 20, vertical: 10),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                              child: Text(
+                                'Simpan',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),

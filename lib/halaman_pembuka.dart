@@ -1,17 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_biking/halaman_login.dart';
+import 'package:flutter/services.dart';
+
+Future<void> loadFont() async {
+  await Future.delayed(Duration(milliseconds: 500));
+  final regularFont = await rootBundle.load('fonts/NamaFont-Regular.ttf');
+  final boldFont = await rootBundle.load('fonts/NamaFont-Bold.ttf');
+  // Use the loaded fonts to create TextStyles
+  final regularTextStyle =
+      TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal);
+  final boldTextStyle =
+      TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold);
+}
 
 class HalamanPembuka extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    loadFont();
     return Scaffold(
       body: SafeArea(
           child: Stack(children: [
-        Align(
-          alignment: Alignment.topCenter,
-          child: Image.asset(
-            'assets/elemenatas.png',
-            fit: BoxFit.cover,
+        Positioned(
+          left: 0,
+          top: 0,
+          child: SizedBox(
+            width: 395,
+            height: 152,
+            child: Image.asset(
+              'assets/elemenatas.png',
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Align(
@@ -22,8 +40,8 @@ class HalamanPembuka extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/biking2.png',
-                    height: 250,
-                    width: 150,
+                    height: 230,
+                    width: 130,
                   )
                 ],
               )),
@@ -34,13 +52,14 @@ class HalamanPembuka extends StatelessWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               SizedBox(
-                height: 260,
+                height: 230,
               ),
               const Text(
-                "SELAMAT PAGI",
+                "SELAMAT DATANG!",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 64, 173, 251),
-                  fontSize: 20,
+                  fontFamily: 'Poppins',
+                  color: Color(0xFF38ACFF),
+                  fontSize: 25,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -52,14 +71,14 @@ class HalamanPembuka extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 300,
+                height: 260,
               ),
               Stack(
                 children: [
                   Container(
                     alignment: Alignment.topCenter,
-                    width: 250,
-                    height: 140,
+                    width: 310,
+                    height: 190,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -82,12 +101,13 @@ class HalamanPembuka extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 460,
+                      height: 450,
                     ),
                     const Text(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis.",
+                      "BiKing adalah aplikasi Bimbingan Konseling yang membantu siswa untuk menemukan solusi atas masalah yang dihadapi.",
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
                       ),
@@ -110,16 +130,17 @@ class HalamanPembuka extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+                    backgroundColor: Color(0xFF38ACFF),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     )),
                 child: Text(
                   "Next",
                   style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 14,
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 )),
