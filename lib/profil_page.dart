@@ -111,6 +111,7 @@ void _nextPage() {
                       const Text(
                         "Info Profil",
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF0579CC),
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -138,7 +139,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 10.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -150,6 +151,7 @@ void _nextPage() {
                                 child: Text(
                                   "Nama",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -157,13 +159,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 10,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "Ahmad",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
@@ -188,7 +191,7 @@ void _nextPage() {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFFFFFFFF),
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: Color(0xFF000000).withOpacity(0.16),
@@ -198,7 +201,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -206,10 +209,11 @@ void _nextPage() {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(left: 6.0),
+                                padding: const EdgeInsets.only(top: 2.0, left: 6.0),
                                 child: Text(
                                   "Nomor HP",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -217,13 +221,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 13,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "082123456789",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
@@ -258,7 +263,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -270,6 +275,7 @@ void _nextPage() {
                                 child: Text(
                                   "Tanggal Lahir",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -277,13 +283,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 13,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "13 02 2005",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
@@ -318,7 +325,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -330,6 +337,7 @@ void _nextPage() {
                                 child: Text(
                                   "Kelas",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -337,13 +345,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 13,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "XII MIPA 1",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
@@ -378,7 +387,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -390,6 +399,7 @@ void _nextPage() {
                                 child: Text(
                                   "NIS",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -397,13 +407,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 13,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "6656",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
@@ -438,7 +449,7 @@ void _nextPage() {
                     width: 335,
                     height: 60,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 11.0, left: 3.0),
+                      padding: const EdgeInsets.only(top: 8.0, left: 3.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -450,6 +461,7 @@ void _nextPage() {
                                 child: Text(
                                   "NISN",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -457,13 +469,14 @@ void _nextPage() {
                                 ),
                               ),
                               SizedBox(
-                                height: 13,
+                                height: 5,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 6.0),
                                 child: Text(
                                   "1234567890",
                                   style: TextStyle(
+                                    fontFamily: 'Poppins',
                                     color: Color(0xFF584D99),
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,

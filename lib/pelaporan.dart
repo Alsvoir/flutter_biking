@@ -124,6 +124,7 @@ class _PelaporanState extends State<Pelaporan> {
                                                 child: Text(
                                                   "Buka",
                                                   style: TextStyle(
+                                                  fontFamily: 'Poppins',
                                                     color: Color.fromARGB(
                                                         255, 255, 255, 255),
                                                     fontSize: 14,
