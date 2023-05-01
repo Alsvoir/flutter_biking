@@ -121,9 +121,6 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                       }
                                       return null;
                                     },
-                                    onSaved: (value) {
-                                      _kelas = value;
-                                    },
                                   ),
                                 ]),
                               ),
@@ -169,9 +166,6 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                           return 'Nama harus diisi';
                                         }
                                         return null;
-                                      },
-                                      onSaved: (value) {
-                                        _nama = value;
                                       },
                                     ),
                                   ],
@@ -219,9 +213,6 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                           return 'Masalah harus diisi';
                                         }
                                         return null;
-                                      },
-                                      onSaved: (value) {
-                                        _masalah = value;
                                       },
                                     ),
                                   ],
@@ -277,9 +268,7 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                           ),
                                           hintText: 'Pilih tanggal laporan',
                                         ),
-                                        onSaved: (value) {
                                           // simpan tanggal yang dipilih
-                                        },
                                       ),
                                     ),
                                   ),
