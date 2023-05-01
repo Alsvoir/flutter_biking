@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_biking/pelaporan.dart';
 import 'package:flutter_biking/profil_page.dart';
 
-
 class LongPage2 extends StatefulWidget {
   @override
   _LongPageState2 createState() => _LongPageState2();
@@ -66,6 +65,7 @@ class _LongPageState2 extends State<LongPage2> {
                           "Bimbingan dan Konseling SMA Negeri 16 Makassar",
                           textAlign: TextAlign.center,
                           style: TextStyle(
+                            fontFamily: 'Poppins',
                             color: Color.fromARGB(255, 64, 173, 251),
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
@@ -101,12 +101,13 @@ class _LongPageState2 extends State<LongPage2> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 270,
+                          height: 265,
                         ),
                         const Text(
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis.",
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                           textAlign: TextAlign.center,
                           style: TextStyle(
+                            fontFamily: 'Poppins',
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
                           ),
@@ -129,9 +130,10 @@ class _LongPageState2 extends State<LongPage2> {
                         const Text(
                           "Koordinator BK",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 64, 173, 251),
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF367CFF),
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ]),
@@ -176,9 +178,10 @@ class _LongPageState2 extends State<LongPage2> {
                       const Text(
                         "Bambang Mulyanto",
                         style: TextStyle(
-                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
                           fontSize: 14,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ]),
@@ -193,13 +196,14 @@ class _LongPageState2 extends State<LongPage2> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 550,
+                          height: 555,
                         ),
                         const Text(
                           "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis.'",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 14,
+                            fontFamily: 'Poppins',
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -216,18 +220,18 @@ class _LongPageState2 extends State<LongPage2> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 610,
+                          height: 620,
                         ),
                         const Text(
                           "Guru-guru BK",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 64, 173, 251),
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF367CFF),
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
-                      ]
-                    ),
+                      ]),
                 ),
               ),
             ),
@@ -236,7 +240,7 @@ class _LongPageState2 extends State<LongPage2> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 630,
+                    height: 640,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -255,7 +259,7 @@ class _LongPageState2 extends State<LongPage2> {
                               fontSize: 13,
                               color: Colors.black,
                               fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
@@ -274,7 +278,7 @@ class _LongPageState2 extends State<LongPage2> {
                               fontSize: 13,
                               color: Colors.black,
                               fontFamily: "Poppins",
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
@@ -318,9 +322,10 @@ class _LongPageState2 extends State<LongPage2> {
                         const Text(
                           "Visi Misi Kami",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 64, 173, 251),
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF367CFF),
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ]),
@@ -341,6 +346,7 @@ class _LongPageState2 extends State<LongPage2> {
                         const Text(
                           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis.",
                           style: TextStyle(
+                            fontFamily: 'Poppins',
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
                           ),
@@ -358,14 +364,15 @@ class _LongPageState2 extends State<LongPage2> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 1125,
+                          height: 1155,
                         ),
                         const Text(
                           "Dokumentasi Kegiatan BK",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 64, 173, 251),
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF367CFF),
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ]),
@@ -377,7 +384,7 @@ class _LongPageState2 extends State<LongPage2> {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 1120,
+                    height: 1160,
                   ),
                   Stack(
                     children: [
@@ -407,22 +414,28 @@ class _LongPageState2 extends State<LongPage2> {
               child: Container(
                 child: Padding(
                   padding: EdgeInsets.only(right: 20),
-                  child: Column(
+                  child: InkWell(
+                    onTap: () {
+                      // definisikan aksi yang ingin dilakukan ketika teks diklik
+                    },
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 1300,
+                          height: 1340,
                         ),
                         const Text(
                           "lihat selengkapnya >>",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 64, 173, 251),
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF367CFF),
                             fontSize: 12,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                      ]
+                      ],
                     ),
+                  ),
                 ),
               ),
             ),

@@ -23,21 +23,24 @@ class _LongPageState extends State<LongPage> {
       _selectedIndex = index;
     });
 
-     if (index == 1) {
+    if (index == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ProfilePage()),
+      );
+    }
+    if (index == 2) {
+      // Jika item yang diklik adalah "Pelaporan"
+      _nextPage(); // Panggil fungsi _nextPage
+    }
+  }
+
+  void _nextPage() {
     Navigator.push(
+      // Navigasi ke halaman selanjutnya di sini
       context,
-      MaterialPageRoute(builder: (context) => ProfilePage()),
+      MaterialPageRoute(builder: (context) => Pelaporan()),
     );
-  }
-   if (index == 2) { // Jika item yang diklik adalah "Pelaporan"
-    _nextPage(); // Panggil fungsi _nextPage
-  }
-}
-void _nextPage() {
-  Navigator.push( // Navigasi ke halaman selanjutnya di sini
-    context,
-    MaterialPageRoute(builder: (context) => Pelaporan()),
-  );
   }
 
   @override
@@ -54,23 +57,27 @@ void _nextPage() {
               ),
             ),
             Align(
-              alignment: Alignment.topCenter,
+              alignment: Alignment.topLeft,
               child: Container(
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 180,
-                      ),
-                      const Text(
-                        "Semangat Pagi!",
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 64, 173, 251),
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 30),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 180,
                         ),
-                      ),
-                    ]),
+                        const Text(
+                          "Semangat Pagi!",
+                          style: TextStyle(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF7466CC),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ]),
+                ),
               ),
             ),
             Align(
@@ -114,6 +121,7 @@ void _nextPage() {
                           "Lakukan konsultasi dengan Guru BK kapan saja dan di mana saja!",
                           textAlign: TextAlign.center,
                           style: TextStyle(
+                            fontFamily: 'Poppins',
                             fontSize: 15,
                             fontWeight: FontWeight.w400,
                           ),

@@ -58,7 +58,7 @@ class _TentangKami extends State<TentangKami> {
             SizedBox(height: 10),
             Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla quam eu faci lisis mollis. ',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
               textAlign: TextAlign.center, // membuat text ke tengah
             ),
           ],
