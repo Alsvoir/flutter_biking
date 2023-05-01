@@ -6,19 +6,20 @@ app.use(express.json());
 
 const pool = mysql.createPool({
   host: 'localhost',
+  port: 3333,
   user: 'root',
-  password: 'password',
-  database: 'biking',
+  password: 'root',
+  database: 'rpl',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
 });
 
 app.post('/report', (req, res) => {
-  const { class: reportClass, name, problems, date } = req.body;
+  const { class: kelas, nama, masalah, tanggal } = req.body;
   pool.query(
-    'INSERT INTO reports (class, name, problems, date) VALUES (?, ?, ?, ?)',
-    [reportClass, name, problems, date],
+    'INSERT INTO reports (kelas, nama, masalah, tanggal) VALUES (?, ?, ?, ?)',
+    [kelas, nama, masalah, tanggal],
     (error, results, fields) => {
       if (error) {
         console.error(error);
