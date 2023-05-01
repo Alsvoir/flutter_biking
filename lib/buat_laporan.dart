@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:http/http.dart' as http;
 
 class BuatLaporan extends StatefulWidget {
   @override
@@ -12,6 +13,10 @@ class _BuatLaporanState extends State<BuatLaporan> {
   String? _kelas;
   String? _nama;
   String? _masalah;
+  TextEditingController kelasController = TextEditingController();
+  TextEditingController namaController = TextEditingController();
+  TextEditingController masalahController = TextEditingController();
+  TextEditingController tanggalController = TextEditingController();
 
   static List<Widget> _widgetOptions = <Widget>[
     Text('Beranda'),
@@ -25,10 +30,20 @@ class _BuatLaporanState extends State<BuatLaporan> {
     });
   }
 
-  void _submitForm() {
-    if (_formKey.currentState?.validate() == true) {
-      _formKey.currentState?.save();
-      // Proses pengiriman data ke API atau database
+  Future<void> _submitForm() async {
+    final response = await http.post(Uri.parse('http://localhost:3000/report'), body: {
+      'kelas': kelasController.text,
+      'nama': namaController.text,
+      'masalah': masalahController.text,
+      'tanggal': tanggalController.text,
+    });
+
+    if (response.statusCode == 200) {
+      // handle success
+      print('Report submitted successfully!');
+    } else {
+      // handle error
+      print('Error submitting report!');
     }
   }
 
@@ -89,6 +104,7 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                     height: 3,
                                   ),
                                   TextFormField(
+                                    controller: kelasController,
                                     decoration: InputDecoration(
                                       border: OutlineInputBorder(
                                           borderRadius:
@@ -137,6 +153,7 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                       height: 3,
                                     ),
                                     TextFormField(
+                                      controller: namaController,
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
                                             borderRadius:
@@ -186,6 +203,7 @@ class _BuatLaporanState extends State<BuatLaporan> {
                                       height: 3,
                                     ),
                                     TextFormField(
+                                      controller: masalahController,
                                       decoration: InputDecoration(
                                         border: OutlineInputBorder(
                                             borderRadius:
@@ -277,6 +295,7 @@ class _BuatLaporanState extends State<BuatLaporan> {
                       alignment: Alignment.bottomCenter,
                       child: ElevatedButton(
                         onPressed: () {
+                          _submitForm();
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
