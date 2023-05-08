@@ -1,6 +1,8 @@
 const express = require('express');
 const mysql = require('mysql2');
+const { Server } = require('ws');
 
+const wss = new server({ server })
 const app = express();
 app.use(express.json());
 
@@ -14,6 +16,7 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0
 });
+
 
 app.post('/report', (req, res) => {
   const { class: kelas, nama, masalah, tanggal } = req.body;
